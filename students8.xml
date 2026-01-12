@@ -1,0 +1,13 @@
+<students>
+    <student>
+        <id>1</id>
+        <name>Devendra</name>
+        <city>Nashik</city>
+    </student>
+
+    <student>
+        <id>2</id>
+        <name>Amit</name>
+        <city>Pune</city>
+    </student>
+</students>

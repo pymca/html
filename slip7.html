@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<button onclick="loadXML()">Load XML</button>
+<p id="box"></p>
+
+<script>
+function loadXML()
+{
+ var x = new XMLHttpRequest();
+ x.open("GET","data.xml",true);
+
+ x.onload = function()
+ {
+   var xml = this.responseXML;
+   var name = xml.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+   var city = xml.getElementsByTagName("city")[0].childNodes[0].nodeValue;
+
+   box.innerHTML = name + " - " + city;
+ }
+
+ x.send();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+
+<button onclick="go()">Show</button>
+<p id="r"></p>
+
+<script>
+function go()
+{
+ var a = new XMLHttpRequest();
+ a.open("GET","students.xml",true);
+
+ a.onload = function()
+ {
+  var s = this.responseXML.getElementsByTagName("student");
+  r.innerHTML =
+   s[0].getElementsByTagName("name")[0].innerHTML + " - " +
+   s[0].getElementsByTagName("city")[0].innerHTML;
+ }
+
+ a.send();
+}
+</script>
+
+</body>
+</html>

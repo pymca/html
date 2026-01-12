@@ -1,0 +1,22 @@
+<html>
+<body>
+
+User: <input id="u"><br><br>
+Pass: <input id="p" type="password"><br><br>
+
+<button onclick="login()">Login</button>
+
+<p id="m"></p>
+
+<script>
+function login()
+{
+ if(u.value=="admin" && p.value=="123")
+   m.innerHTML="Login OK";
+ else
+   m.innerHTML="Wrong";
+}
+</script>
+
+</body>
+</html>
